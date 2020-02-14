@@ -15,7 +15,8 @@ p,ul,div,h1,h2,h3,ul,li{
 header{
     position: relative;
     display:flex;
-    height: 150px;
+    flex-wrap:wrap;
+    height: 210px;
     padding: 0 20px;
     align-items:center;
 }
@@ -61,7 +62,7 @@ header{
     width:20%;
     height:50%;
     position: absolute;
-    bottom:0; left:0; right:0; top:0;
+    bottom:58%; left:0; right:0; top:42%;
     margin:auto
 }
 
@@ -74,8 +75,10 @@ header{
     height:100%;
 }
 
-.phone{
-    flex-grow: 1;
+.container-column{
+    height: 150px;
+    display:flex;
+    align-items: center;
 }
 
 .phone p{
@@ -108,7 +111,9 @@ header{
 /* navigation */
 
 nav{
+    border-top:1px solid #525252;
     height:60px;
+    width:100%;
 }
 
 .navigation{
@@ -123,11 +128,11 @@ nav{
 }
 
 .navigation .navigation-item a{
-    display:block;
+    display:inline;
     color: black;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 5px 10px;
+    padding: 0 10px;
     font-weight: 700;
 }
 
@@ -474,7 +479,59 @@ ul{
     border:none;
     position: relative;
     background:url('img/ico/arrow.svg') no-repeat #961d1d 50% 50%;
-    background-size: 60%;
+    background-size: 45%;
+}
+
+/*////////////////*/
+@media (max-width: 1250px) {
+    .container-column{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .phone{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 980px) {
+    header{
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .cafe{
+        position: static ;
+        order:1;
+        width:30%;
+        padding:20px 0 40px 0; 
+    }
+
+    nav{
+        order:2;
+        border:none;
+        height:auto;
+        margin-bottom:40px;
+    }
+
+    .navigation{
+        flex-direction: column;
+    }
+
+    .navigation .navigation-item a{
+        display: block;
+        padding:10px;
+    }
+    .social{
+        order: 3;
+        margin-bottom:20px;
+    }
+
+    .container-column{
+        order:5;
+        height:auto;
+    }
 }
 
 
