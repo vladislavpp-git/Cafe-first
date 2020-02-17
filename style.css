@@ -148,11 +148,9 @@ nav{
 /* slider */
 
 .slider-header{
-    width:100%;
 }
 
 .slider-header img{
-    width:100%;
     height:100%;
 }
 
@@ -254,35 +252,6 @@ nav{
 .loyality{
     margin-bottom: 50px;
 }
-.loyality .cards-container-main{
-    /* height:40vh; */
-    overflow: hidden;
-    width:100%;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.cards-container-main .btn{
-    display:block;
-    position: absolute;
-    top:0;
-    width:20%;
-    height:100%;
-    z-index: 10;
-}
-
-.cards-container-main .btn::before{
-    content:"";
-    display: block;
-    position: absolute;
-    width:30px;
-    height:30px;
-    background:no-repeat #cccccc 50% 50%;
-    background-size: 50%;
-    top:50%;
-    border-radius: 50%;
-    opacity: 0.5;
-}
 
 .cards-container-main .btn.next::before{
     left:5%;
@@ -295,30 +264,37 @@ nav{
     transform: rotate(180deg);
 }
 
-.cards-container-main .btn.next{
-    right:0;
+.loyality-slider .card{
+    margin:0 30px;
 }
 
-.cards-container-main .btn.back{
-    left:0;
+.loyality-slider .slick-arrow{
+    position:absolute;
+    top:48%;
+    text-indent: -9999px;
+    z-index:10;
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius: 50%;
+    background:url('img/ico/angle-right.svg') no-repeat 50% 50% #cccccc; 
+    outline: none;
 }
 
-.cards-container-main .btn.next:hover::before,
-.cards-container-main .btn.back:hover::before{
-    opacity: 1;
+div[class*="slick"]{
+    outline: none;
 }
 
-.loyality .cards-container-daughter{
-    width:200%;
-    transform:translate(-25%);
-    height:100%;
+.loyality-slider .slick-prev{
+    left:6.5%;
 }
 
-.cards-container-daughter .card{
-    float:left;
-    margin: 0 1.5%;
-    width:30%;
-    height:100%;
+.loyality-slider .slick-next{
+    right:6.5%;
+}
+
+.loyality-slider img{
+    height: 100%;
 }
 
 /* gallery */

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic"
         rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick.css"/>
 </head>
 
 <body>
@@ -62,8 +63,29 @@
             </nav>
         </header>
         <article class="slider-header">
-            <img src="img/mainSlider/main-1.jpg">
+            <div>
+                <img src="img/mainSlider/main-1.jpg">
+            </div>
+            <div>
+                <img src="img/mainSlider/main-2.jpg">
+            </div>
+            <div>
+                <img src="img/mainSlider/main-3.jpg">
+            </div>
+            <div>
+                <img src="img/mainSlider/main-4.jpg">
+            </div>
+            <div>
+                <img src="img/mainSlider/main-5.jpg">
+            </div>
+            <div>
+                <img src="img/mainSlider/main-6.jpg">
+            </div>
+            <div>
+                <img src="img/mainSlider/main-7.jpg">
+            </div>
         </article>
+
     </section>
     <section class="about-restoran">
         <article class="eat-menu">
@@ -106,15 +128,14 @@
         </article>
         <article class="loyality">
             <h2 class="title">Программы лояльности</h2>
-            <div class="cards-container-main">
-                <a class="btn next"></a>
-                <a class="btn back"></a>
-                <div class="cards-container-daughter">
-                    <img class="card" src="img/loyality/loyality-1.jpg">
-                    <img class="card" src="img/loyality/loyality-2.jpg">
-                    <img class="card" src="img/loyality/loyality-3.jpg">
-                </div>
+
+            <div class="loyality-slider">
+                <div class="card"><img  src="img/loyality/loyality-1.jpg"></div>
+                <div class="card"><img src="img/loyality/loyality-2.jpg"></div>
+                <div class="card"><img  src="img/loyality/loyality-3.jpg"></div>
             </div>
+
+
         </article>
         <article class="photo-gallery">
             <h2 class="title">Фотогалерея</h2>
@@ -152,14 +173,13 @@
                 </p>
                 <form class="form-reserve">
                     <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="Номер">
+                    <input class="phone" type="text" placeholder="Номер">
                     <input type="text" placeholder="Количество человек">
                     <label>
-                        <input id="date" type="text" placeholder="Выберете дату" name="filed-name"
-                            data-mask="00/00/0000" />
+                        <input class="date" id="date" type="text" placeholder="Выберете дату"/>
                         <div class="calendar-icon"></div>
                     </label>
-                    <input type="text" placeholder="Выберете время">
+                    <input class="time" id="time" type="text" placeholder="Выберете время">
                     <input type="submit" value="Забронировать">
                 </form>
                 <p class="subtext">Нажимая кнопку "Забронировать" вы соглашаетесь с <a href="">Политикой
@@ -205,8 +225,11 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/loyalytiSlider.js"></script>
-    <script src="js/jquery.mask.min.js"></script>
+    <script src="node_modules\jquery-mask-plugin\dist\jquery.mask.min.js"></script>
+    <script src="js/mask.js"></script>
+    <script type="text/javascript" src="node_modules/slick-carousel/slick/slick.js"></script>
 </body>
 
 </html>

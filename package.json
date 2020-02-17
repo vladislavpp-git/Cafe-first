@@ -2,9 +2,10 @@
   "name": "bristolcafe",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "mask.js",
   "dependencies": {
-    "jquery-mask-plugin": "^1.14.16"
+    "jquery-mask-plugin": "^1.14.16",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {},
   "scripts": {
